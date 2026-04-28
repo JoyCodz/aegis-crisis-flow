@@ -1,0 +1,50 @@
+{
+    "name": "CrisisEvent",
+    "type": "object",
+    "properties": {
+        "incident_id": {
+            "type": "string"
+        },
+        "event_type": {
+            "type": "string",
+            "enum": [
+                "detection",
+                "classification",
+                "escalation",
+                "responder_assigned",
+                "evacuation_initiated",
+                "route_blocked",
+                "reroute",
+                "zone_isolated",
+                "responder_arrived",
+                "resolved",
+                "sensor_failure",
+                "ai_decision",
+                "manual_override"
+            ]
+        },
+        "description": {
+            "type": "string"
+        },
+        "actor": {
+            "type": "string"
+        },
+        "zone_name": {
+            "type": "string"
+        },
+        "automated": {
+            "type": "boolean"
+        },
+        "timestamp": {
+            "type": "string"
+        },
+        "severity": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "event_type",
+        "description",
+        "timestamp"
+    ]
+}

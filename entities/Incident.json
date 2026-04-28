@@ -1,0 +1,92 @@
+{
+  "name": "Incident",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "fire",
+        "medical",
+        "security",
+        "gas_leak",
+        "crowd_panic",
+        "structural"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "critical",
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "escalating",
+        "contained",
+        "resolved"
+      ]
+    },
+    "zone_id": {
+      "type": "string"
+    },
+    "zone_name": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    },
+    "ai_reasoning": {
+      "type": "string"
+    },
+    "recommended_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "assigned_responders": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affected_zones": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evacuation_active": {
+      "type": "boolean"
+    },
+    "blocked_exits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source": {
+      "type": "string"
+    },
+    "detected_at": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "type",
+    "severity",
+    "status"
+  ]
+}

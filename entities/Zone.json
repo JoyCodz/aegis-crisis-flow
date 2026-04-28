@@ -1,0 +1,64 @@
+{
+  "name": "Zone",
+  "type": "object",
+  "properties": {
+    "zone_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "floor": {
+      "type": "number"
+    },
+    "capacity": {
+      "type": "number"
+    },
+    "occupancy": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "normal",
+        "elevated",
+        "danger",
+        "evacuating",
+        "clear",
+        "isolated"
+      ]
+    },
+    "exits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blocked_exits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "accessible_exits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risk_score": {
+      "type": "number"
+    },
+    "adjacent_zones": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "zone_id",
+    "name",
+    "floor"
+  ]
+}

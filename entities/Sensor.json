@@ -1,0 +1,66 @@
+{
+  "name": "Sensor",
+  "type": "object",
+  "properties": {
+    "sensor_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "smoke",
+        "temperature",
+        "gas",
+        "motion",
+        "crowd_density",
+        "door_contact",
+        "cctv"
+      ]
+    },
+    "zone_id": {
+      "type": "string"
+    },
+    "zone_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "online",
+        "offline",
+        "degraded",
+        "maintenance"
+      ]
+    },
+    "value": {
+      "type": "number"
+    },
+    "unit": {
+      "type": "string"
+    },
+    "threshold": {
+      "type": "number"
+    },
+    "battery": {
+      "type": "number"
+    },
+    "reliability_score": {
+      "type": "number"
+    },
+    "last_active": {
+      "type": "string"
+    },
+    "alert": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "sensor_id",
+    "name",
+    "type",
+    "status"
+  ]
+}
