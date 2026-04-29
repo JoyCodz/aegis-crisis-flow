@@ -45,7 +45,7 @@ The platform operates entirely in the browser using a powerful custom simulation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/nobodydev-gh/Aegis.git
+   git clone https://github.com/JoyCodz/Aegis.git
    cd Aegis
    ```
 
